@@ -40,15 +40,15 @@ public class ThreadPoolExecutorDemo {
             Runnable task = new NameTask("task" + i);
             tasks.add(task);
         }
-
+        
         // 三种缓冲队列的使用场景
-        // workQueueDemo(tasks);
+        workQueueDemo(tasks);
 
         // 默认的ThreadFactory 和实现自定义ThreadFactory
-        // ThreadFactoryDemo();
+        ThreadFactoryDemo();
 
         // 拒绝策略
-        // RejectedExecutionHandlerDemo(tasks);
+        RejectedExecutionHandlerDemo(tasks);
 
         //JDK 提供的四种默认的线程池实现
 
@@ -61,6 +61,7 @@ public class ThreadPoolExecutorDemo {
         // 固定一个线程,默认线程不回收，并且使用无界队列
         ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
 
+        // 固定核心线程,maximumPoolSize=Integer.MAX_VALUE 空闲线程立刻回收 使用DelayedWorkQueue队列 主要用于执行定时任务和具有固定周期的重复任务
         ExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(1);
 
     }
@@ -73,13 +74,13 @@ public class ThreadPoolExecutorDemo {
             DiscardOldestPolicy
      */
     private static void RejectedExecutionHandlerDemo(List<Runnable> tasks) {
-        // defaultPolicy(tasks);
+        defaultPolicy(tasks);
 
-        // discardPolicy(tasks);
+        discardPolicy(tasks);
 
         discardOldestPolicy(tasks);
 
-        // callerRunsPolicy(tasks);
+        callerRunsPolicy(tasks);
     }
 
     /*
@@ -222,9 +223,9 @@ public class ThreadPoolExecutorDemo {
 
     private static void workQueueDemo(List<Runnable> tasks) {
 
-        // SynchronousQueueDemo(tasks);
+        SynchronousQueueDemo(tasks);
 
-        // ArrayBlockingQueueDemo(tasks);
+        ArrayBlockingQueueDemo(tasks);
 
         LinkedBlockingQueueDemo(tasks);
     }
