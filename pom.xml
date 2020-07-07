@@ -13,7 +13,7 @@
     <modules>
         <module>jdk-demo</module>
         <module>spring-boot-demo</module>
-        <module>jersey-web-demo</module>
+        <module>karaf-demo</module>
     </modules>
 
     <build>
