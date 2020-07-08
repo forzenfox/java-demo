@@ -8,17 +8,17 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class LogAspect {
 
-    @Pointcut("execution(@org.dylan.demo.aspectj.Log  * *..*.*(..)) && @annotation(logAnno)")
+    @Pointcut(value = "execution(@org.dylan.demo.aspectj.Log  * *..*.*(..)) && @annotation(logAnno)")
     public void pointCut(Log logAnno) {
 
     }
 
-    @Before("pointCut(logAnno)")
+    @Before(value = "pointCut(logAnno)", argNames = "logAnno")
     public void before(Log logAnno) {
         System.out.println("运行前 执行增强代码" + logAnno.operation());
     }
 
-    @After("pointCut(logAnno)")
+    @After(value = "pointCut(logAnno)", argNames = "logAnno")
     public void after(Log logAnno) {
         System.out.println("运行后 执行增强代码" + logAnno.operation());
     }

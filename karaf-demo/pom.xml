@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>aspectj</module>
         <module>demo/demo-api</module>
         <module>demo/demo-impl</module>
         <module>demo/demo-rest</module>

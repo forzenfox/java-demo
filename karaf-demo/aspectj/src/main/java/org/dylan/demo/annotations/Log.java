@@ -1,4 +1,4 @@
-package org.dylan.demo.api.annotations;
+package org.dylan.demo.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
