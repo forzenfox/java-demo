@@ -12,7 +12,7 @@ public class RestProvider {
 
     @Inject
     public RestProvider(
-            @Reference ITest test) {
+            @Reference(filter = "(type=proxy)") ITest test) {
         RestProvider.test = test;
     }
 }

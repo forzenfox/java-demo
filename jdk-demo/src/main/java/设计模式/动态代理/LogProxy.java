@@ -1,6 +1,5 @@
 package 设计模式.动态代理;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -39,18 +38,9 @@ public class LogProxy implements InvocationHandler {
         }
         System.out.println("代理启动");
         //检查注解类型
-        // Annotation[] annos = mm.getAnnotations();
-        // for (Annotation anno : annos) {
-        //     if (anno instanceof Log) {
-        //         Log tem = ( Log ) anno;
-        //         System.out.println("探测到了LogTag注解，并且发现注解的level值为：" + tem.operation());
-        //     }
-        // }
-
-        Annotation anno = mm.getAnnotation(Log.class);
+        Log anno = mm.getAnnotation(Log.class);
         if (Objects.nonNull(anno)) {
-            Log tem = ( Log ) anno;
-            System.out.println("探测到了LogTag注解，并且发现注解的level值为：" + tem.operation());
+            System.out.println("探测到了LogTag注解，并且发现注解的level值为：" + anno.operation());
         }
 
         //调用具体的方法，执行业务逻辑
