@@ -1,4 +1,4 @@
-package 设计模式.动态代理;
+package 设计模式.动态代理.JDK;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

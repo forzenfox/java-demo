@@ -6,4 +6,9 @@ public class LogDemo {
     public void test() {
         System.out.println("Hello World!");
     }
+
+    public void test1() {
+        test();
+        System.out.println("no OK");
+    }
 }

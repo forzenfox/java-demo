@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class LogAspect {
 
-    @Pointcut("execution(@org.dylan.demo.aspectj.Log  * *..*.*(..)) && @annotation(logAnno)")
+    @Pointcut("execution(* *..*.*(..)) && @annotation(logAnno)")
     public void pointCut(Log logAnno) {
 
     }

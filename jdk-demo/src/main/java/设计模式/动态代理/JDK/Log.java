@@ -1,4 +1,4 @@
-package 设计模式.动态代理;
+package 设计模式.动态代理.JDK;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

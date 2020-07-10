@@ -1,4 +1,4 @@
-package 设计模式.动态代理;
+package 设计模式.动态代理.JDK;
 
 public class TestImpl implements ITest {
 
