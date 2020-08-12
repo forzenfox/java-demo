@@ -26,13 +26,14 @@
             <artifactId>jersey-json</artifactId>
         </dependency>
 
-
+        <!--swagger 注解-->
         <dependency>
-            <groupId>com.inspur.ice</groupId>
-            <artifactId>sys-framework</artifactId>
-            <version>4.1.0-SNAPSHOT</version>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.6.2</version>
         </dependency>
 
+        <!--OSGI注解-->
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>blueprint-maven-plugin-annotation</artifactId>
@@ -43,8 +44,11 @@
             <artifactId>demo-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>org.dylan.demo</groupId>
+            <artifactId>demo-base</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -59,22 +63,7 @@
                     </scanPaths>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Import-Package>
-                            com.sun.jersey.spi.container.servlet,
-                            <!--REST rource init class-->
-                            <!--filter-->
-                            *
-                        </Import-Package>
-                        <Web-ContextPath>/api</Web-ContextPath>
-                    </instructions>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
+
 </project>

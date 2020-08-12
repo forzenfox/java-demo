@@ -11,9 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>jdk-demo</module>
         <module>karaf-demo</module>
-        <module>aspectj-maven-plugin</module>
     </modules>
 
     <properties>

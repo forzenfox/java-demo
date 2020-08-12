@@ -17,8 +17,10 @@
         <module>demo/demo-api</module>
         <module>demo/demo-impl</module>
         <module>demo/demo-rest</module>
+        <module>web</module>
         <module>features</module>
         <module>karaf</module>
+        <module>demo/demo-base</module>
     </modules>
 
 </project>
