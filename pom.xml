@@ -12,7 +12,7 @@
 
     <modules>
         <module>jdk-demo</module>
-<!--        <module>spring-boot-demo</module>-->
+        <module>spring-boot-demo</module>
 <!--        <module>karaf-demo</module>-->
 <!--        <module>aspectj-maven-plugin</module>-->
     </modules>
