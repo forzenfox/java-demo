@@ -1,4 +1,4 @@
-package 日期.JDK8;
+package JDK8.日期;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -26,7 +26,7 @@ public class LocalDateTimeDemo {
         LocalDateTime dt3 = LocalDateTime.of(d2, t2);
 
         //标准格式传入 ：ISO 8601规定的日期和时间分隔符是T
-        // 日期：yyyy-MM-dd
+        // JDK8.日期：yyyy-MM-dd
         // 时间：HH:mm:ss
         // 带毫秒的时间：HH:mm:ss.SSS
         // 日期和时间：yyyy-MM-dd'T'HH:mm:ss
@@ -43,7 +43,7 @@ public class LocalDateTimeDemo {
         dt2 = LocalDateTime.parse("2019/11/30 15:16:17", dtf);
         System.out.println(dt2);
 
-        // 时间 日期 比较 isBefore(); isAfter();
+        // 时间 JDK8.日期 比较 isBefore(); isAfter();
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime target = LocalDateTime.of(2019, 11, 19, 8, 15, 0);
         System.out.println(now.isBefore(target));
