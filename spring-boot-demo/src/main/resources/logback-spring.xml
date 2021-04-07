@@ -15,7 +15,7 @@
             <pattern>${FILE_LOG_PATTERN}</pattern>
             <charset>utf8</charset>
         </encoder>
-        <file>spring-boot-demo/target/app.log</file>
+        <file>target/app.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
             <maxIndex>1</maxIndex>
             <fileNamePattern>app.log.%i</fileNamePattern>
