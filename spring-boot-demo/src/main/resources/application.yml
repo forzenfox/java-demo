@@ -17,15 +17,17 @@ spring:
       write-dates-as-timestamps: false
   #redis基础配置
   redis:
-    # Redis服务器地址
     host: forzenfox.myqnapcloud.com
-    #Redis服务器连接端口
     port: 20001
-    #password:
+    #    host: master.redis-cdp.wg6sfg.cnw1.cache.amazonaws.com.cn
+    #    port: 6379
+    #    password: 2Enatv!#Cdrp1svg
     # Redis数据库索引（默认为0）
     database: 1
     # 连接超时时间（毫秒）
     timeout: 5000
+    # 是否开启ssl
+    ssl: true
     jedis:
       pool:
         #连接池最大连接数（使用负值表示没有限制）
