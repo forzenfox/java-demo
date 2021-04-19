@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Slf4j
 public class CollectorsDemo {
@@ -44,6 +45,9 @@ public class CollectorsDemo {
         DemoCompute();
     }
     
+    /**
+     * 元素聚合
+     */
     private static void DemoCompute() {
         // 求最值 3
         List<Integer> nums = Arrays.asList(1, 2, 3);
@@ -58,6 +62,12 @@ public class CollectorsDemo {
         // 平均值 2.0
         Double avgDouble = nums.stream().collect(Collectors.averagingDouble(x -> x));
         Double avgInt = nums.stream().collect(Collectors.averagingInt(x -> x));
+        
+        //  mapping
+        log.info("mapping:{}", Stream.of("a", "b", "c").collect(Collectors.mapping(x -> x.toLowerCase(), Collectors.joining())));
+        log.info("mapping2:{}", Stream.of("a", "b", "c").collect(Collectors.mapping(x -> x.toLowerCase(), Collectors.toList())));
+        
+        
         log.info("最大:{} 最小:{} 求和:{} 平均:{},{}", maxValue, minValue, sumValue, avgDouble, avgInt);
     }
     
