@@ -60,7 +60,8 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>7.8.1</version>
+            <!--<version>7.8.1</version>-->
+            <version>5.2.4</version>
         </dependency>
         <!--mysql-->
         <dependency>
@@ -83,9 +84,13 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>7.8.1</version>
                 <configuration>
-                    <url>jdbc:mysql://forzenfox.myqnapcloud.com:1033/flyway_test</url>
+                    <url>jdbc:mysql://forzenfox.myqnapcloud.com:1033</url>
                     <user>root</user>
                     <password>123456</password>
+                    <schemas>
+                        <schema>flyway_test</schema>
+                        <schema>test</schema>
+                    </schemas>
                 </configuration>
                 <dependencies>
                     <dependency>

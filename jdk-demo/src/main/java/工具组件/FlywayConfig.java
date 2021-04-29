@@ -12,7 +12,8 @@ import org.flywaydb.core.Flyway;
 public class FlywayConfig {
     public static Flyway config() {
         return Flyway.configure()
-                .dataSource("jdbc:mysql://forzenfox.myqnapcloud.com:1033/flyway_test", "root", "123456")
+                .dataSource("jdbc:mysql://forzenfox.myqnapcloud.com:1033/flyway_test", "root", "123456") // Mysql 8.0
+                //.dataSource("jdbc:mysql://forzenfox.myqnapcloud.com:1034/flyway_test", "root", "123456") // Mysql 5.6
                 .load();
     }
 }

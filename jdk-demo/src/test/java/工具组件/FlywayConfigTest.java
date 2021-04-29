@@ -12,7 +12,12 @@ import org.junit.Test;
 public class FlywayConfigTest {
     
     @Test
-    public void configTest() {
+    public void migrateTest() {
         FlywayConfig.config().migrate();
+    }
+    
+    @Test
+    public void repairTest() {
+        FlywayConfig.config().repair();
     }
 }
