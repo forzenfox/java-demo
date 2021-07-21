@@ -1,6 +1,7 @@
 package JDK8.Stream;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -11,6 +12,15 @@ import java.util.stream.Stream;
 
 @Slf4j
 public class StreamTest {
+    
+    /**
+     * 测试null对象的Stream方法是否报空指针
+     */
+    @Test
+    public void nullOfStream() {
+        List<String> a = null;
+        Assert.assertThrows(NullPointerException.class, () -> a.stream().findFirst().isPresent());
+    }
     
     @Test
     public void creatTest() {
